@@ -1,0 +1,295 @@
+/* CSS Document */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: .8px;
+  word-break: break-all;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #1ca9e3;
+}
+
+img,
+object {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  border: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.pc {
+  display: block;
+}
+
+#js-pageTop {
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #ccc;
+}
+
+/*--------------------------------
+ 全体
+---------------------------------*/
+#wrapper {
+  padding-top: 68px;
+  	/*フッター下部に固定*/
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section .inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.section-title-area {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: "Open sans", sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 15px;
+  letter-spacing: .05em;
+}
+
+/*--------------------------------
+ グローバルナビ
+---------------------------------*/
+
+#gnav {
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+}
+
+#gnav {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#gnav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#gnav li {
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+  padding: 0 24px;
+  letter-spacing: .05em;
+}
+
+#gnav li a {
+  position: relative;
+  display: inline-block;
+  padding: 20px 0;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  color: #333;
+}
+
+#gnav li a:hover {
+  opacity: 1;
+}
+
+#gnav li a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333;
+}
+
+#gnav li a:hover::after {
+  width: 100%;
+}
+
+/*--------------------------------
+ CONTACT
+---------------------------------*/
+#contact .contact-list ul {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 150px;
+  margin: 0 auto;
+}
+#contact .mailbox {
+  text-align: center;
+}
+#contact .mailbox-list {
+  display: inline-block;
+  text-align: left;
+  padding-left: 145px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#contact .contact-list li {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+#contact .contact-list li img {
+  width: 50px;
+}
+
+#contact .contact-list-desc {
+  font-weight: bold;
+}
+
+#contact .contact-other {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*--------------------------------
+ Footer
+---------------------------------*/
+footer{/*フッター下部に固定*/
+	width: 100%;
+	margin-top: auto;
+}
+
+#footer {
+  background-color: #1d1d1d;
+}
+
+#footer .inner {
+  padding: 30px;
+}
+
+#footer .copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #8c8c8c;
+}
+
+/*media Queries 767
+----------------------------------------------------*/
+
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  #wrapper {
+    padding-top: 82px;
+    min-height: 100vh;
+    position: relative;/*相対位置*/
+    padding-bottom: 120px;
+    box-sizing: border-box;
+  }
+  #gnav {
+    padding: 15px 0;
+  }
+
+  #gnav li {
+    font-size: 13px;
+    padding: 2px 15px;
+  }
+
+  #gnav li a {
+    padding: 0;
+  }
+
+  #gnav li a:hover {
+    opacity: 1;
+  }
+
+  #gnav li a::after {
+    display: none;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section .inner {
+    padding: 0 15px;
+  }
+
+  .section .section-title-area {
+    margin-bottom: 20px;
+  }
+
+  .section .section-title {
+    font-size: 22px;
+  }
+
+  #contact .contact-list ul {
+    width: 100px;
+  }
+
+  #contact .contact-list li img {
+    width: 30px;
+  }
+
+  #contact .contact-list-desc {
+    font-size: 12px;
+  }
+
+	#footer{
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+  #footer .inner {
+    padding: 20px 0;
+  }
+}
